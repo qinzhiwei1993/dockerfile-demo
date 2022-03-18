@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=Expires content=0><meta http-equiv=Pragma content=no-cache><meta http-equiv=Cache-control content=no-cache><meta http-equiv=Cache content=no-cache><link rel=icon href=/service/favicon.ico><link rel=stylesheet type=text/css href=//at.alicdn.com/t/font_944413_ninf4soxrwr.css><script src=/service/jquery.3.4.0.min.js></script><script src=/service/jquery-ui.1.12.1.min.js></script><script src=/service/bluebird.min.js></script><script src=/service/plupload-2.1.2/js/plupload.full.min.js></script><script id=xesTrack src=//static-xesapi.speiyou.cn/xesFeProject/xesFeSource/xesJsLibrary/talSensor_v2.1.0.js></script><script src=https://ucres.100tal.com/libs/udc_voip_sdk/voip.js></script><title></title><link href=/service/css/applyManage.b8b757a9.css rel=prefetch><link href=/service/css/applyWorkbench.d9fa8d5e.css rel=prefetch><link href=/service/css/attendanceManage.044fc62c.css rel=prefetch><link href=/service/css/classManage.78a0b211.css rel=prefetch><link href=/service/css/dataReport.ab973452.css rel=prefetch><link href=/service/css/efficiency.41f5c57f.css rel=prefetch><link href=/service/css/feedback.d0546bbf.css rel=prefetch><link href=/service/css/finance.5ce9f932.css rel=prefetch><link href=/service/css/grayMgt.04a6ab6a.css rel=prefetch><link href=/service/css/mallMgt.9c2a4c4a.css rel=prefetch><link href=/service/css/news.53012be2.css rel=prefetch><link href=/service/css/onlineAdviser.7e29053b.css rel=prefetch><link href=/service/css/operative.87a337a1.css rel=prefetch><link href=/service/css/operative~resource.a193a10d.css rel=prefetch><link href=/service/css/pushmsg.34a7c606.css rel=prefetch><link href=/service/css/report.c9beca1a.css rel=prefetch><link href=/service/css/resource.404fc677.css rel=prefetch><link href=/service/css/shift.91712f14.css rel=prefetch><link href=/service/css/stuArchives.93b5f942.css rel=prefetch><link href=/service/css/talService.83dd1cf3.css rel=prefetch><link href=/service/js/applyManage.16f84a91.js rel=prefetch><link href=/service/js/applyWorkbench.6f2d85a2.js rel=prefetch><link href=/service/js/attendanceManage.86d20c41.js rel=prefetch><link href=/service/js/classManage.af128c8c.js rel=prefetch><link href=/service/js/dataReport.e4156714.js rel=prefetch><link href=/service/js/efficiency.183cc43d.js rel=prefetch><link href=/service/js/feedback.3424c370.js rel=prefetch><link href=/service/js/finance.6939032f.js rel=prefetch><link href=/service/js/grayMgt.580a030e.js rel=prefetch><link href=/service/js/mallMgt.caaed3f6.js rel=prefetch><link href=/service/js/news.07768882.js rel=prefetch><link href=/service/js/notice.958b090d.js rel=prefetch><link href=/service/js/onlineAdviser.5445467d.js rel=prefetch><link href=/service/js/operative.9fd1d652.js rel=prefetch><link href=/service/js/operative~resource.44fe3b59.js rel=prefetch><link href=/service/js/pushmsg.ef5153bf.js rel=prefetch><link href=/service/js/report.ec4143ea.js rel=prefetch><link href=/service/js/resource.8d10d86d.js rel=prefetch><link href=/service/js/shift.aa87e8f1.js rel=prefetch><link href=/service/js/stuArchives.880583a5.js rel=prefetch><link href=/service/js/talService.eb78fe1f.js rel=prefetch><link href=/service/js/vendors~applyManage.02c65f9a.js rel=prefetch><link href=/service/js/vendors~applyManage~resource.ec43a713.js rel=prefetch><link href=/service/js/vendors~dataReport.5c07b20c.js rel=prefetch><link href=/service/js/vendors~pushmsg.3896f641.js rel=prefetch><link href=/service/js/vendors~resource.e4b77315.js rel=prefetch><link href=/service/js/vendors~shift~talService.501a7667.js rel=prefetch><link href=/service/css/app.2a06b13e.css rel=preload as=style><link href=/service/css/chunk-element.635bc84a.css rel=preload as=style><link href=/service/js/app.c37b526c.js rel=preload as=script><link href=/service/js/chunk-element.c3398630.js rel=preload as=script><link href=/service/js/chunk-view-design.9ee2d697.js rel=preload as=script><link href=/service/js/runtime.e298080d.js rel=preload as=script><link href=/service/css/chunk-element.635bc84a.css rel=stylesheet><link href=/service/css/app.2a06b13e.css rel=stylesheet></head><body><noscript><strong>请您启用JavaScript以保证盘古平台正常使用</strong></noscript><script>$(function() {
+        $(document).on("click", function () {
+          /*回置modal定位*/
+          $(".ivu-modal-hidden .ivu-modal").css({
+            left: "auto",
+            top: "50px"
+          });
+          $('#feedback-draggable').draggable({
+              axis: "y",
+              cursor: "move",
+              containment: ".content-wrapper",
+              drag: function() {
+                window.pangu_drag = true
+              }
+            }
+          )
+          $('.call-wrapper').draggable({
+              cursor: "move",
+              containment: "parent",
+              handle: "#call-wrapper-handle"
+              // drag: function() {
+              //   window.pangu_drag = true
+              // }
+            }
+          )
+          $('.video-call-wrapper').draggable({
+              // cursor: "move",
+              // containment: "parent",
+              // handle: "#remote-video-wrapper"
+              // drag: function() {
+              //   window.pangu_drag = true
+              // }
+            }
+          )
+          $(".ivu-modal").draggable({cursor: "move",containment: "parent", handle: ".ivu-modal-header,.ivu-modal-footer"});
+          $(".im-mini").draggable({
+            cursor: "move",
+            handle: ".im-status",
+            axis: "x",
+            containment: ".content-wrapper",
+            drag: function() {
+              window.pangu_drag = true
+            }
+          })
+          $(".poperClass").draggable({
+            cursor: "move",
+            handle: ".im-chat-title",
+            containment: ".content-wrapper"
+          })
+          // if (self == top) {
+          //   $(".ivu-modal-mask,.ivu-modal-wrap").css("top", 64)
+          // }
+        })
+        $(window).resize(function(){
+          $("#feedback-draggable").css({
+            right: "0",
+            left: 'auto'
+          });
+          $(".im-mini").css({
+            top: "auto",
+            bottom: '10px'
+          });
+        });
+      })</script><div id=app></div><script>!function(e){function r(r){for(var t,n,c=r[0],i=r[1],p=r[2],d=0,f=[];d<c.length;d++)n=c[d],Object.prototype.hasOwnProperty.call(o,n)&&o[n]&&f.push(o[n][0]),o[n]=0;for(t in i)Object.prototype.hasOwnProperty.call(i,t)&&(e[t]=i[t]);for(l&&l(r);f.length;)f.shift()();return s.push.apply(s,p||[]),a()}function a(){for(var e,r=0;r<s.length;r++){for(var a=s[r],t=!0,n=1;n<a.length;n++){var i=a[n];0!==o[i]&&(t=!1)}t&&(s.splice(r--,1),e=c(c.s=a[0]))}return e}var t={},n={runtime:0},o={runtime:0},s=[];function c(r){if(t[r])return t[r].exports;var a=t[r]={i:r,l:!1,exports:{}};return e[r].call(a.exports,a,a.exports,c),a.l=!0,a.exports}c.e=function(e){var r=[];n[e]?r.push(n[e]):0!==n[e]&&{applyWorkbench:1,attendanceManage:1,stuArchives:1,"operative~resource":1,resource:1,classManage:1,efficiency:1,feedback:1,finance:1,grayMgt:1,mallMgt:1,news:1,onlineAdviser:1,operative:1,report:1,applyManage:1,dataReport:1,pushmsg:1,shift:1,talService:1}[e]&&r.push(n[e]=new Promise((function(r,a){for(var t="css/"+({applyWorkbench:"applyWorkbench",attendanceManage:"attendanceManage",stuArchives:"stuArchives","vendors~applyManage~resource":"vendors~applyManage~resource","vendors~resource":"vendors~resource","operative~resource":"operative~resource",resource:"resource",classManage:"classManage",efficiency:"efficiency",feedback:"feedback",finance:"finance",grayMgt:"grayMgt",mallMgt:"mallMgt",news:"news",notice:"notice",onlineAdviser:"onlineAdviser",operative:"operative",report:"report","vendors~applyManage":"vendors~applyManage",applyManage:"applyManage","vendors~dataReport":"vendors~dataReport",dataReport:"dataReport","vendors~pushmsg":"vendors~pushmsg",pushmsg:"pushmsg","vendors~shift~talService":"vendors~shift~talService",shift:"shift",talService:"talService"}[e]||e)+"."+{applyWorkbench:"d9fa8d5e",attendanceManage:"044fc62c",stuArchives:"93b5f942","vendors~applyManage~resource":"31d6cfe0","vendors~resource":"31d6cfe0","operative~resource":"a193a10d",resource:"404fc677",classManage:"78a0b211",efficiency:"41f5c57f",feedback:"d0546bbf",finance:"5ce9f932",grayMgt:"04a6ab6a",mallMgt:"9c2a4c4a",news:"53012be2",notice:"31d6cfe0",onlineAdviser:"7e29053b",operative:"87a337a1",report:"c9beca1a","vendors~applyManage":"31d6cfe0",applyManage:"b8b757a9","vendors~dataReport":"31d6cfe0",dataReport:"ab973452","vendors~pushmsg":"31d6cfe0",pushmsg:"34a7c606","vendors~shift~talService":"31d6cfe0",shift:"91712f14",talService:"83dd1cf3"}[e]+".css",o=c.p+t,s=document.getElementsByTagName("link"),i=0;i<s.length;i++){var p=(l=s[i]).getAttribute("data-href")||l.getAttribute("href");if("stylesheet"===l.rel&&(p===t||p===o))return r()}var d=document.getElementsByTagName("style");for(i=0;i<d.length;i++){var l;if((p=(l=d[i]).getAttribute("data-href"))===t||p===o)return r()}var f=document.createElement("link");f.rel="stylesheet",f.type="text/css",f.onload=r,f.onerror=function(r){var t=r&&r.target&&r.target.src||o,s=new Error("Loading CSS chunk "+e+" failed.\n("+t+")");s.code="CSS_CHUNK_LOAD_FAILED",s.request=t,delete n[e],f.parentNode.removeChild(f),a(s)},f.href=o,document.getElementsByTagName("head")[0].appendChild(f)})).then((function(){n[e]=0})));var a=o[e];if(0!==a)if(a)r.push(a[2]);else{var t=new Promise((function(r,t){a=o[e]=[r,t]}));r.push(a[2]=t);var s,i=document.createElement("script");i.charset="utf-8",i.timeout=120,c.nc&&i.setAttribute("nonce",c.nc),i.src=function(e){return c.p+"js/"+({applyWorkbench:"applyWorkbench",attendanceManage:"attendanceManage",stuArchives:"stuArchives","vendors~applyManage~resource":"vendors~applyManage~resource","vendors~resource":"vendors~resource","operative~resource":"operative~resource",resource:"resource",classManage:"classManage",efficiency:"efficiency",feedback:"feedback",finance:"finance",grayMgt:"grayMgt",mallMgt:"mallMgt",news:"news",notice:"notice",onlineAdviser:"onlineAdviser",operative:"operative",report:"report","vendors~applyManage":"vendors~applyManage",applyManage:"applyManage","vendors~dataReport":"vendors~dataReport",dataReport:"dataReport","vendors~pushmsg":"vendors~pushmsg",pushmsg:"pushmsg","vendors~shift~talService":"vendors~shift~talService",shift:"shift",talService:"talService"}[e]||e)+"."+{applyWorkbench:"6f2d85a2",attendanceManage:"86d20c41",stuArchives:"880583a5","vendors~applyManage~resource":"ec43a713","vendors~resource":"e4b77315","operative~resource":"44fe3b59",resource:"8d10d86d",classManage:"af128c8c",efficiency:"183cc43d",feedback:"3424c370",finance:"6939032f",grayMgt:"580a030e",mallMgt:"caaed3f6",news:"07768882",notice:"958b090d",onlineAdviser:"5445467d",operative:"9fd1d652",report:"ec4143ea","vendors~applyManage":"02c65f9a",applyManage:"16f84a91","vendors~dataReport":"5c07b20c",dataReport:"e4156714","vendors~pushmsg":"3896f641",pushmsg:"ef5153bf","vendors~shift~talService":"501a7667",shift:"aa87e8f1",talService:"eb78fe1f"}[e]+".js"}(e);var p=new Error;s=function(r){i.onerror=i.onload=null,clearTimeout(d);var a=o[e];if(0!==a){if(a){var t=r&&("load"===r.type?"missing":r.type),n=r&&r.target&&r.target.src;p.message="Loading chunk "+e+" failed.\n("+t+": "+n+")",p.name="ChunkLoadError",p.type=t,p.request=n,a[1](p)}o[e]=void 0}};var d=setTimeout((function(){s({type:"timeout",target:i})}),12e4);i.onerror=i.onload=s,document.head.appendChild(i)}return Promise.all(r)},c.m=e,c.c=t,c.d=function(e,r,a){c.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:a})},c.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},c.t=function(e,r){if(1&r&&(e=c(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var a=Object.create(null);if(c.r(a),Object.defineProperty(a,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var t in e)c.d(a,t,function(r){return e[r]}.bind(null,t));return a},c.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return c.d(r,"a",r),r},c.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},c.p="/service/",c.oe=function(e){throw console.error(e),e};var i=window.webpackJsonp=window.webpackJsonp||[],p=i.push.bind(i);i.push=r,i=i.slice();for(var d=0;d<i.length;d++)r(i[d]);var l=p;a()}([]);
+//# sourceMappingURL=runtime.e298080d.js.map</script><script src=/service/js/chunk-view-design.9ee2d697.js></script><script src=/service/js/chunk-element.c3398630.js></script><script src=/service/js/app.c37b526c.js></script></body></html>

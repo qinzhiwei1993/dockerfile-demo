@@ -1,0 +1,1 @@
+import{d as a,B as s,o as t,c as o,a as n,w as e,b as r,r as u}from"./vendor.af17c2ec.js";var c=a({components:{Button:s},setup(){}});const p={class:"about"},d=n("h1",null,"This is an about page",-1),i=r("主要按钮");c.render=function(a,s,r,c,f,l){const m=u("Button");return t(),o("div",p,[d,n(m,{type:"primary"},{default:e((()=>[i])),_:1})])};export default c;

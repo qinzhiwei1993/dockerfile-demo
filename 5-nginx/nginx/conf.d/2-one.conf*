@@ -1,0 +1,79 @@
+# 一站式nginx配置
+
+server {
+    listen 80;
+    server_name one-beta.speiyou.cn;
+    index index.jsp index.html index.htm;
+
+    access_log /data/nginx/logs/one-beta.speiyou.cn_access.log main;
+    error_log /data/nginx/logs/one-beta.speiyou.cn_error.log;
+
+    location /service {
+        root /webroot/new;
+        try_files $uri $uri/ /service/index.html last;
+        index index.html index.htm;
+    }
+
+    location /room {
+        root /webroot/new;
+        try_files $uri $uri/ /one-stop/index.html last;
+        index index.html index.htm;
+        access_log /data/nginx/logs/a.log main;
+    }
+
+    location /marketing {
+        root /webroot/new;
+        try_files $uri $uri/ /one-stop/index.html last;
+        index index.html index.htm;
+    }
+    location /one-stop {
+        root /webroot/new;
+        try_files $uri $uri/ /one-stop/index.html last;
+        index index.html index.htm;
+    }
+    location /course {
+        root /webroot/new;
+        try_files $uri $uri/ /course/index.html last;
+        index index.html index.htm;
+    }
+
+    location /teacher {
+        root /webroot/new;
+        try_files $uri $uri/ /teacher/index.html last;
+        index index.html index.htm;
+    }
+
+    location /auth {
+        root /webroot/new;
+        try_files $uri $uri/ /auth/index.html last;
+        index index.html index.htm;
+    }
+
+    location /workflow {
+        root /webroot/new;
+        try_files $uri $uri/ /workflow/index.html last;
+        index index.html index.htm;
+    }
+
+    location /knowledge {
+        root /webroot/new;
+        try_files $uri $uri/ /knowledge/index.html last;
+        index index.html index.htm;
+    }
+
+    location /short-message {
+        root /webroot/new;
+        try_files $uri $uri/ /short-message/index.html last;
+        index index.html index.htm;
+    }
+
+    location / {
+        root /webroot/new/platform-static;
+        try_files $uri $uri/ @router;
+        index index.html index.htm;
+    }
+
+    location @router {
+        rewrite ^.*$ /index.html last;
+    }
+}
